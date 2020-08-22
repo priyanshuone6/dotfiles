@@ -1,0 +1,13 @@
+#######################
+## Global .gitignore ##
+#######################
+
+### IDEs ###
+
+#VSCode
+.vscode
+
+### Languages ###
+
+# Python
+.ipynb_checkpoints

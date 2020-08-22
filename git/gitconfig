@@ -11,7 +11,7 @@
 [branch]
 	autosetuprebase = remote
 [core]
-	excludesfile = gitignore_global
-	editor = vim
+	excludesfile = gitignore
+	editor       = vim
 [help]
 	autoCorrect = -1
