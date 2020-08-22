@@ -1,0 +1,11 @@
+
+# Extra flags
+alias grep='grep --color'
+alias grepall='grep -rnwi'
+
+# Typos
+alias sl='ls'
+alias clera='clear'
+
+# Misc
+alias home='cd ~'
