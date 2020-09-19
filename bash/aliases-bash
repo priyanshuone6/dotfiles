@@ -2,6 +2,8 @@
 # Extra flags
 alias grep='grep --color'
 alias grepall='grep -rnwi'
+# Always prompt unless -f is used
+alias rm='rm -i'
 
 # Typos
 alias sl='ls'
