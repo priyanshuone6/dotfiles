@@ -5,7 +5,7 @@
     tree = log --decorate --graph --oneline
     pick = cherry-pick
     logs = log --format='%C(yellow)%h%C(reset) %C(cyan)%<(32)%an%C(reset) %ad %s' --date=short
-    rb   = "!f() { if (($# != 0)); then git rebase --interactive --autosquash HEAD~$1; else git rebase --interactive --autosquash; fi;}; f"
+    rb   = "!f() { git rebase --interactive --autosquash HEAD~$1; }; f"
     co   = checkout
     merge= merge --squash
 [branch]
