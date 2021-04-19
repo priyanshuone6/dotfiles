@@ -1,6 +1,6 @@
 [user]
-    name  = Kapil Agarwal
-	email = kapilag96@gmail.com
+    name  = Priyanshu Agarwal
+	email = priyanshuone6@gmail.com
 [alias]
     tree = log --decorate --graph --oneline
     pick = cherry-pick
