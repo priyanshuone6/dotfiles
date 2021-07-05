@@ -8,6 +8,7 @@
     rb   = "!f() { git rebase --interactive --autosquash HEAD~$1; }; f"
     co   = checkout
     merge= merge --squash
+    pushup=push -u origin
 [branch]
 	autosetuprebase = remote
 [core]
@@ -18,3 +19,5 @@
     tool = vscode
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
+[push]
+	default = current
