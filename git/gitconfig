@@ -1,18 +1,6 @@
 [user]
-<<<<<<< HEAD
     name  = Priyanshu Agarwal
 	email = priyanshuone6@gmail.com
-[alias]
-    tree = log --decorate --graph --oneline
-    pick = cherry-pick
-    logs = log --format='%C(yellow)%h%C(reset) %C(cyan)%<(32)%an%C(reset) %ad %s' --date=short
-    rb   = "!f() { git rebase --interactive --autosquash HEAD~$1; }; f"
-    co   = checkout
-    merge= merge --squash
-    pushup=push -u origin
-=======
-    name  = Kapil Agarwal
-    email = kapilag96@gmail.com
 [alias]
     tree  = log --decorate --graph --oneline
     pick  = cherry-pick
@@ -21,7 +9,6 @@
     co    = checkout
     merge = merge --squash
     pushup= push -u origin
->>>>>>> 0a283c3ff269e8074b51618ff5ec03776af3adb3
 [branch]
     autosetuprebase = remote
 [push]
@@ -34,10 +21,5 @@
     tool = vscode
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
-<<<<<<< HEAD
-[push]
-	default = current
-=======
 [mergetool "vscode"]
     cmd = code --wait $MERGED
->>>>>>> 0a283c3ff269e8074b51618ff5ec03776af3adb3
