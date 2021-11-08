@@ -9,6 +9,7 @@ source ~/dotfiles/bash/bashrc
 ```bash
 alias ca='conda activate'
 alias jn='jupyter notebook'
+alias jl='jupyter lab'
 
 format () {
     isort $1
