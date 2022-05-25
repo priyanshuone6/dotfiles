@@ -2,12 +2,11 @@
 # Extra flags
 alias grep='grep --color'
 alias grepall='grep -rnwi'
+alias ll='ls -alh'
+
 # Always prompt unless -f is used
 alias rm='rm -i'
 
 # Typos
 alias sl='ls'
 alias clera='clear'
-
-# Misc
-alias home='cd ~'
