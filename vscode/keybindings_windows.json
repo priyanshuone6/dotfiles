@@ -1,0 +1,62 @@
+// Place your key bindings in this file to override the defaults
+
+[
+    // Set ctrl + Tab and ctrl + shift + tab to switch editors only when text input focus
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.previousEditor"
+    },
+    // Switch terminal windows with ctrl + tab and ctrl + shift + tab
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    // Maximize terminal with ctrl + m
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
+    // Navigate the sidebar
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextSideBarView",
+        "when": "sideBarFocus "
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousSideBarView",
+        "when": "sideBarFocus "
+    }
+]
