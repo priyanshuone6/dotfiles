@@ -1,25 +1,18 @@
 # dotfiles
 The repository contains all my dotfiles
 
-## .bashrc
+## Run these
 ```bash
-source ~/dotfiles/bash/aliases-bash
-source ~/dotfiles/bash/bashrc
-```
-```bash
-alias ca='conda activate'
-alias jn='jupyter notebook'
-alias jl='jupyter lab'
+mkdir -p "$HOME/.venvs"
 
-format () {
-    isort $1
-    black $1
-    flake8 $1
-}
+ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+
+grep -Fq 'dotfiles/zsh/zshrc' "$HOME/.zshrc" 2>/dev/null || printf '\n# load dotfiles zshrc\n[[ -r "$HOME/dotfiles/zsh/zshrc" ]] && . "$HOME/dotfiles/zsh/zshrc"\n' >> "$HOME/.zshrc"
+
+source ~/.zshrc
 ```
 
-## gitconfig
-Using symlink
-```bash
-ln -s ~/dotfiles/git/gitconfig .gitconfig
-```
+# uvbash helper for venv
+uvbash create <name> [uv venv options...]
+uvbash use    <name>
+uvbash del    <name>

@@ -1,0 +1,37 @@
+# minimal zshrc for macOS + uv + uvbash
+
+# keep envs here (change if you want)
+export UV_VENVS="${UV_VENVS:-$HOME/.venvs}"
+
+# prevent Python's activate script from changing the prompt (we'll handle it)
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# ensure zsh evaluates command substitutions in the prompt
+setopt PROMPT_SUBST
+# don't let Python's activate script change the prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# git branch helper
+parse_git_branch() {
+  local b
+  b=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || return
+  [[ $b == HEAD ]] && b=detached
+  printf ' (%s)' "$b"
+}
+
+# (env) user@host <green path><yellow (branch)> %
+PROMPT='${VIRTUAL_ENV:+(${VIRTUAL_ENV:t}) }%n@%m %F{green}%~%f%F{yellow}$(parse_git_branch)%f %# '
+
+# small quality-of-life aliases (same spirit as before, no BSD/GNU fuss)
+alias ll='ls -alh'
+alias grepall='grep -rnwi'
+alias rm='rm -i'
+alias sl='ls'
+alias clera='clear'
+
+# editor (works if `code` is installed)
+export EDITOR="code -w"
+export VISUAL="code -w"
+
+# uvbash commands
+source ~/dotfiles/zsh/uvbash.zsh
